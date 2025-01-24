@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Dasar HTML dan CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0077cc;
+        }
+        .code-box {
+            background: #eef;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0077cc;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        .interactive {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px dashed #0077cc;
+            border-radius: 8px;
+            background-color: #f9f9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Belajar Dasar HTML dan CSS</h1>
+        <p>
+            HTML (HyperText Markup Language) adalah bahasa untuk membuat struktur halaman web. 
+            CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan gaya elemen HTML.
+        </p>
+
+        <h2>Apa itu HTML?</h2>
+        <p>HTML adalah bahasa markup yang menggunakan elemen seperti:</p>
+        <ul>
+            <li><code>&lt;h1&gt;</code>: Untuk membuat judul.</li>
+            <li><code>&lt;p&gt;</code>: Untuk membuat paragraf.</li>
+            <li><code>&lt;a&gt;</code>: Untuk membuat tautan.</li>
+            <li><code>&lt;img&gt;</code>: Untuk menambahkan gambar.</li>
+        </ul>
+        
+        <h3>Contoh Kode HTML:</h3>
+        <div class="code-box">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Judul Halaman&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Halo Dunia!&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://google.com"&gt;Kunjungi Google&lt;/a&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        <h2>Apa itu CSS?</h2>
+        <p>CSS digunakan untuk mempercantik tampilan halaman web. Misalnya, Anda dapat mengubah warna teks, mengatur tata letak, atau menambahkan animasi.</p>
+
+        <h3>Contoh Kode CSS:</h3>
+        <div class="code-box">
+            body {<br>
+            &nbsp;&nbsp;background-color: #f0f8ff;<br>
+            &nbsp;&nbsp;color: #333;<br>
+            &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+            }<br><br>
+            h1 {<br>
+            &nbsp;&nbsp;color: #0077cc;<br>
+            &nbsp;&nbsp;text-align: center;<br>
+            }
+        </div>
+
+        <h2>Latihan Interaktif</h2>
+        <p>Klik tombol di bawah ini untuk melihat bagaimana HTML dan CSS bekerja bersama.</p>
+        <button onclick="showInteractive()">Lihat Contoh</button>
+        <div id="interactive-section" class="interactive" style="display: none;">
+            <h1>Halo Dunia!</h1>
+            <p>Ini adalah contoh HTML dan CSS bekerja bersama.</p>
+            <p style="color: blue;">Teks ini memiliki warna biru yang diatur langsung dengan CSS.</p>
+        </div>
+
+        <h2>Struktur File HTML dan CSS</h2>
+        <p>Biasanya, HTML dan CSS dipisahkan menjadi dua file:</p>
+        <h3>File HTML:</h3>
+        <div class="code-box">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Halo Dunia!&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        <h3>File CSS:</h3>
+        <div class="code-box">
+            body {<br>
+            &nbsp;&nbsp;background-color: #eef;<br>
+            &nbsp;&nbsp;color: #333;<br>
+            }<br><br>
+            h1 {<br>
+            &nbsp;&nbsp;color: #0077cc;<br>
+            }
+        </div>
+    </div>
+
+    <script>
+        function showInteractive() {
+            const interactiveSection = document.getElementById("interactive-section");
+            interactiveSection.style.display = "block";
+        }
+    </script>
+</body>
+</html>
